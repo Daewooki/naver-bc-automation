@@ -81,17 +81,15 @@ cd Desktop
 아래 명령어를 입력하고 Enter:
 
 ```
-git clone https://github.com/YOUR_USERNAME/brandconnect-automation.git
+git clone https://github.com/Daewooki/naver-bc-automation.git
 ```
 
-> ⚠️ `YOUR_USERNAME` 부분은 실제 GitHub 주소로 바꿔주세요!
-
-다운로드가 완료되면 바탕화면에 `brandconnect-automation` 폴더가 생겨요.
+다운로드가 완료되면 바탕화면에 `naver-bc-automation` 폴더가 생겨요.
 
 ### 2-4. 프로젝트 폴더로 이동
 
 ```
-cd brandconnect-automation
+cd naver-bc-automation
 ```
 
 ---
@@ -208,7 +206,7 @@ GPT가 글을 써주려면 OpenAI API 키가 필요해요.
 
 ### 5-4. .env 파일 수정하기
 
-1. 바탕화면의 `brandconnect-automation` 폴더를 열어요
+1. 바탕화면의 `naver-bc-automation` 폴더를 열어요
 
 2. `.env` 파일을 찾아요
    > ⚠️ 파일이 안 보인다면? 
@@ -461,7 +459,7 @@ npm run login
 1. PowerShell 열기
 2. 프로젝트 폴더로 이동:
    ```
-   cd Desktop\brandconnect-automation
+   cd Desktop\naver-bc-automation
    ```
 3. 서버 실행:
    ```

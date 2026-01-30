@@ -48,8 +48,8 @@ node --version
 
 **방법 A: Git 사용 (권장)**
 ```bash
-git clone https://github.com/YOUR_USERNAME/brandconnect-automation.git
-cd brandconnect-automation
+git clone https://github.com/Daewooki/naver-bc-automation.git
+cd naver-bc-automation
 ```
 
 **방법 B: ZIP 다운로드**
