@@ -137,26 +137,6 @@ export default function Dashboard() {
     }
   };
 
-  // 상품 정보 스크래핑
-  const handleScrape = async (id: string) => {
-    try {
-      const res = await fetch(`/api/brandlinks/${id}/scrape`, {
-        method: "POST",
-      });
-
-      const data = await res.json();
-
-      if (data.success) {
-        alert(`상품 정보 추출 완료: ${data.data.productName}`);
-        fetchLinks();
-      } else {
-        alert(`오류: ${data.error}`);
-      }
-    } catch (error) {
-      console.error("스크래핑 실패:", error);
-    }
-  };
-
   // 통계 계산
   const stats = {
     total: links.length,
@@ -346,17 +326,6 @@ export default function Dashboard() {
                     </td>
                     <td className="px-4 py-3 text-center">
                       <div className="flex items-center justify-center gap-2">
-                        {/* 상품 정보 가져오기 */}
-                        {!link.productName && (
-                          <button
-                            onClick={() => handleScrape(link.id)}
-                            className="px-3 py-1 text-sm bg-slate-100 text-slate-700 rounded hover:bg-slate-200 transition-colors"
-                            title="상품 정보 가져오기"
-                          >
-                            🔍
-                          </button>
-                        )}
-                        
                         {/* 발행하기 버튼 */}
                         {link.status === "READY" && (
                           <button
@@ -402,7 +371,6 @@ export default function Dashboard() {
           <ol className="text-sm text-slate-600 space-y-1 list-decimal list-inside">
             <li>먼저 <code className="bg-slate-200 px-1 rounded">npm run login</code>으로 네이버 로그인</li>
             <li>브랜드커넥트 링크를 추가 (https://naver.me/xxx 형태)</li>
-            <li>🔍 버튼으로 상품 정보 가져오기</li>
             <li>🚀 발행 버튼으로 블로그 글 자동 작성 &amp; 발행</li>
           </ol>
         </div>
